@@ -139,14 +139,18 @@ a {
 }
 
 .about {
-  background-image: url(/images/about-bg.jpg);
-  background-size: 50% cover;
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-color: $headerfootertextcolor;
   &__inner {
-    max-width: 40%;
     padding-top: 140px;
+    position: relative;
+    &-items {
+      display: flex;
+      &__img {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 0;
+      }
+    }
   }
   &__text {
     max-width: 450px;
@@ -284,11 +288,15 @@ ul.slick-dots {
 }
 
 .masha {
-  background-image: url(/images/masha.jpg);
-  background-size: 50% cover;
-  background-repeat: no-repeat;
-  background-position: right top;
-  padding-bottom: 67px;
+  &__inner {
+    position: relative;
+  }
+  &-img {
+    position: absolute;
+    height: 110%;
+    top: -60px;
+    right: 130px;
+  }
 }
 
 .title__masha {
@@ -474,6 +482,17 @@ ul.slick-dots {
     display: block;
     position: relative;
     z-index: 2;
+  }
+
+  .about__inner-items {
+    display: block;
+  }
+  .about__inner-items__img {
+    position: relative;
+    margin: 0 auto;
+  }
+  .masha-img {
+    display: none;
   }
   .team {
     background-color: $headerfootertextcolor;
